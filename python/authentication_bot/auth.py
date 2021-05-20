@@ -25,37 +25,46 @@ async def on_command_error(ctx,error):
 @client.command()
 async def startauth(ctx):
     global channel_id,role_id
-    if channel_id:
-        await ctx.send("already starting")
-        return
-    with open("channel.txt",encoding="utf-8") as f:
-        readtxt = f.read()
-    channel_id = int(readtxt.split(",")[0])
-    role_id = int(readtxt.split(",")[1])
-    print(datetime.datetime.now(),"start authentication",channel_id)
-    await ctx.send("start authentication")
+    if ctx.author.guild_permissions.administrator:
+        if channel_id:
+            await ctx.send("already starting")
+            return
+        with open("channel.txt",encoding="utf-8") as f:
+            readtxt = f.read()
+        channel_id = int(readtxt.split(",")[0])
+        role_id = int(readtxt.split(",")[1])
+        print(datetime.datetime.now(),"start authentication",channel_id)
+        await ctx.send("start authentication")
+    else:
+        await ctx.send("u not permission")
 
 @client.command()
 async def stopauth(ctx):
     global channel_id,cnt
-    if channel_id == 0:
-        await ctx.send("already stoping")
-        return
-    print(datetime.datetime.now(),"stop authentication",str(cnt),"add role")
-    channel_id = 0
-    await ctx.send("stop authentication\n",str(cnt),"add role")
-    cnt = 0
+    if ctx.author.guild_permissions.administrator:
+        if channel_id == 0:
+            await ctx.send("already stoping")
+            return
+        print(datetime.datetime.now(),"stop authentication",str(cnt),"add role")
+        channel_id = 0
+        await ctx.send("stop authentication\n" + str(cnt) + "add role")
+        cnt = 0
+    else:
+        await ctx.send("u not permission")
 
 @client.command()
 async def setting(ctx):
-    mcsplit = ctx.message.content.split()
-    if len(mcsplit) > 3 or not mcsplit[1].isdigit() or not mcsplit[2].isdigit():
-        await ctx.send("missing arg\nusage : /setting chanelid roleid")
-        return
-    with open("channel.txt","w",encoding="utf-8") as f:
-        f.write(str(mcsplit[1]) + "," + str(mcsplit[2]))
-        await ctx.send("setting ok")
-        print(datetime.datetime.now(),"set id")
+    if ctx.author.guild_permissions.administrator:
+        mcsplit = ctx.message.content.split()
+        if len(mcsplit) > 3 or not mcsplit[1].isdigit() or not mcsplit[2].isdigit():
+            await ctx.send("missing arg\nusage : /setting chanelid roleid")
+            return
+        with open("channel.txt","w",encoding="utf-8") as f:
+            f.write(str(mcsplit[1]) + "," + str(mcsplit[2]))
+            await ctx.send("setting ok")
+            print(datetime.datetime.now(),"set id")
+    else:
+        await ctx.send("u not permission")
 
 
 @client.event
