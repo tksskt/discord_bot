@@ -26,4 +26,4 @@ Use the `/startauth` command to start authentication.
   
 * ## Known bug & problem  
  * Even if you set the wrong ID, it will be recognized.
- * Anyone can use the command
+ * Anyone can use the command　<- fixed? Only admin can run
