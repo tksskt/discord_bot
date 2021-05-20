@@ -24,7 +24,7 @@ client.on("message", message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-  if (command == "stid"){
+  if (command == "setting"){
     if (args.length = 2){
       if (isNum(args[0]) && isNum(args[1])) {
         if (fwrite("./channel.txt",args[0] + "," + args[1])){
@@ -41,7 +41,7 @@ client.on("message", message => {
     }
   }
 
-  if (command == "stauth"){
+  if (command == "startauth"){
     if (fcheck("./channel.txt")){
       var content = fread("./channel.txt");
       const mcsplit = content.split(',');
@@ -54,7 +54,7 @@ client.on("message", message => {
     }
   }
 
-  if (command == "spauth"){
+  if (command == "stopauth"){
     channelid = 0;
     roleid = 0;
     console.log(`stop auth`);
