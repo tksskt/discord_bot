@@ -25,6 +25,5 @@ Use the `/startauth` command to start authentication.
   ![copy ID](https://cdn.discordapp.com/attachments/821321393005264896/844378090432233522/unknown.png)  
   
 * ## Known bug & problem  
- * Even if you set the wrong ID, it will be recognized.
- * Anyone can use the command
-
+ * ~~Even if you set the wrong ID, it will be recognized.~~ Fixed.
+ * ~~Anyone can use the command~~ Commands can be use by only admin.
