@@ -2,6 +2,7 @@
 * ## python  
   * ### authentication bot
   * ### read text chat bot
+  * ### Automatically add Voice channel
 
 ***
 * ## java
