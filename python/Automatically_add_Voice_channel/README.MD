@@ -9,7 +9,7 @@ After running the bot, specify the category ID and voice channel ID to use.
  ### discord.py 1.7.3++
 
 * ## FAQ
-  * How to get the gategory ID.
+  * How to get the category ID.
   Right-click on the target category and click **Copy ID**.  
   ![copy ID](https://cdn.discordapp.com/attachments/821321393005264896/855016052517240832/unknown.png)  
   * How to get the voice channel ID.  
