@@ -18,4 +18,3 @@ After running the bot, specify the category ID and voice channel ID to use.
   
 * ## Known bug & problem  
  * Even if you set the wrong ID, it will be recognized.
- * Anyone can use the command　<- fixed? Only admin can run
