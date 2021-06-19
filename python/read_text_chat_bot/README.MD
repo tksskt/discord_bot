@@ -27,7 +27,7 @@
     `/shk uv delete`  
     
     `/shk read_name [on/off]`  
-    ユーザーの名前も読み上げたい場合は以下のコマンドを使用してください If you want to read the user's name aloud
+    ユーザーの名前も読み上げたい場合は以下のコマンドを使用してください If you want to read the user's name aloud  
     `/shk read_name on`
   
 * ## 使い方 how to use
