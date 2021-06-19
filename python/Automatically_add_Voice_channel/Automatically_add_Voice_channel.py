@@ -48,17 +48,14 @@ async def on_voice_state_update(member,before,after):
     if after.channel :
         if after.channel.id == channelid:
             print(member,member.id,after.channel.name,after.channel.id)
-            channellist = await member.guild.fetch_channels()
-            cnt = 0
-            for cnamelist in channel_name:
-                for vc in vcid:
-                    if cnamelist == vc.name:
-                        cnt = cnt + 1
-                        break
-            await createvc(member,after,channel_name[cnt])
-
-
-
+            vclist = []
+            for vc in vcid:
+                vclist = vc.name
+            # channellist = list(set(channel_name) ^ set(vclist))
+            # print(channellist)
+            channellist = list(filter(lambda x: x not in vclist,channel_name))
+            print(channellist)
+            await createvc(member,after,channellist[0])
 
 async def createvc(member,after,list):
     newchannelid = await member.guild.create_voice_channel(str(list),overwrites=None,category=after.channel.category)
