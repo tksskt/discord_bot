@@ -51,8 +51,6 @@ async def on_voice_state_update(member,before,after):
             vclist = []
             for vc in vcid:
                 vclist = vc.name
-            # channellist = list(set(channel_name) ^ set(vclist))
-            # print(channellist)
             channellist = list(filter(lambda x: x not in vclist,channel_name))
             print(channellist)
             await createvc(member,after,channellist[0])
