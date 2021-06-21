@@ -10,4 +10,5 @@
 ***
 * ## js
   * ### authentication bot
+  * ### Automatically add Voice channel
 ***
