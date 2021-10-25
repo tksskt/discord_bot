@@ -11,7 +11,7 @@
   停止時も同様に `!hornoh` コマンドを送信することで停止します。  
   
 * ## 招待リンク Invitation link  
- [えっちかもしれない](https://discord.com/api/oauth2/authorize?client_id=902116721631068181&permissions=68608&scope=bot)
+  [えっちかもしれない](https://discord.com/api/oauth2/authorize?client_id=902116721631068181&permissions=68608&scope=bot)
  
 * ## 注意  
   * 本botはnsfwコンテンツをdiscordに投稿することを促す目的で使用しないでください。  
