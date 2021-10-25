@@ -10,6 +10,10 @@
   判定を開始したいときは `!hornoh` コマンドを送信することで開始します。  
   停止時も同様に `!hornoh` コマンドを送信することで停止します。  
   
-* ## 招待リンク Invitation link
+* ## 招待リンク Invitation link  
  [えっちかもしれない](https://discord.com/api/oauth2/authorize?client_id=902116721631068181&permissions=68608&scope=bot)
+ 
+* ## 注意
+  本botはnsfwコンテンツをdiscordに投稿することを促す目的で使用しないでください。
+  本botの使用に際して、利用者が被ったいかなる損害について製作者(tks)も、製作者は一切の責任を負いかねますのであらかじめご了承ください。
 
