@@ -2,7 +2,7 @@
 
 * ## command list
   * 開始/停止コマンド  
-  `!hornoh`  
+   `!hornoh`  
   
 * ## 使い方 how to use
   **<font color="Red">まずはこのボットをサーバーに招待してください</font>**  
